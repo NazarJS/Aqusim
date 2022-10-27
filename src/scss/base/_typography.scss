@@ -12,7 +12,7 @@ li {
 }
 
 ul, ol {
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 h1,
@@ -25,7 +25,7 @@ h5,
 .h3,
 .h4,
 .h5 {
-  font-family: $baseFont;
+  font-family: $fontRal;
   color: #000;
   text-transform: none;
   line-height: 1.42;
