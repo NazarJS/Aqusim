@@ -1,0 +1,33 @@
+.ui-btn {
+    display: inline-block;
+    width: 100%;
+    // max-width: 322px;
+    padding: 0 5px;
+    height: 80px;
+    line-height: 80px;
+    background-color: #ee2742;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover {
+        background-color: rgba(0,0,0,0);
+        border: 3px solid #ee2742;
+        line-height: 77px;
+        color: #ee2742;
+    }
+
+    @media(max-width:1024px) {
+       &:hover {
+            background-color: rgba(0,0,0,0);
+            border: 3px solid #ee2742;
+            line-height: 40px;
+            color: #ee2742;
+       }
+    }
+}
