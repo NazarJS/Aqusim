@@ -8,10 +8,12 @@
 /* layout */
 @import "./layout/inc-header.scss";
 @import "./layout/inc-footer.scss";
-@import "./layout/main.scss";
+
 
 /* pages */
 @import "index";
+@import "./layout/main.scss";
+@import "./layout/vacancy.scss";
 
 
 * {
@@ -72,7 +74,7 @@ body {
 
 .container {
   width: 100%;
-  // max-width: 1400px;
+  max-width: 1920px;
   margin: 0 auto;
   padding-left: 80px;
   padding-right: 80px;
