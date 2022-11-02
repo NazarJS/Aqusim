@@ -223,8 +223,11 @@
 
     .jq-selectbox {
         overflow: unset;
-        flex: 0 0 25%;
-        max-width: 25%;
+
+        &:focus-visible {
+            outline: none;
+            border: none;
+        }
 
         @media(max-width:576px) {
             flex: 0 0 100%;
@@ -234,33 +237,23 @@
     }
 
     .jq-selectbox__select {
-        // margin: 0 -25px;
-        // &::after {
-        //     content: "";
-        //     position: absolute;
-        //     right: 30px;
-        //     top: 50%;
-        //     transform: translate(0, -50%);
-        //     width: 10px;
-        //     height: 10px;
-        //     // background-image: url("../images/svg/select-arrow.svg");
-        //     // width: 60px;
-        //     // height: 60px;
-        //     transform: rotate(135deg);
-        //     border-top: 1px solid #000000;
-        //     border-right: 1px solid #000000;
-
-        // }
         border-radius: 0;
+
+        &:focus-visible {
+            outline: none;
+            border: none;
+        }
     }
 
     .jq-selectbox__dropdown {
         // bottom: -215px !important;
+        width: 100% !important;
         bottom: none !important;
-        top: 115px !important;
+        top: 100% !important;
         max-height: 268px !important;
         overflow: hidden;
         overflow-y: auto;
+        margin-top: 20px;
 
         @media (max-width:576px) {
           max-height: 188px;
@@ -374,10 +367,3 @@
     display: none !important;
 }
 
-.main-about-info-wrap ul::-webkit-scrollbar-thumb {
-    background-color: $colorRed !important;
-}
-
-.main-about-info-wrap ul::-webkit-scrollbar-button {
-    display: none !important;
-}

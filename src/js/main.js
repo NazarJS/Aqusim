@@ -1,4 +1,4 @@
-$(".main-filter-select").styler();
+$("select").styler();
 
 $(document).on("click", ".header-burger", function () {
     $(".header-mobile").addClass('open');
@@ -8,18 +8,28 @@ $(document).on("click", ".heder-mobile-close", function () {
     $(".header-mobile").removeClass('open');
 });
 
+$(document).on("click", ".vacancy-info-filter", function () {
+  $(".mobile-filter").addClass('open');
+});
+
+$(document).on("click", ".mobile-filter-close", function () {
+  $(".mobile-filter").removeClass('open');
+});
+
 // $(document).on("click", ".main-filter-select", function () {
 //     $(".header-mobile").addClass('qwe');
 // });
 
-let qwe = document.querySelector(".field-telephone-wrap-select");
-let zxc = document.querySelector(".zxc");
+// let qwe = document.querySelector(".field-telephone-wrap-select");
+// let zxc = document.querySelector(".zxc");
 
 
-qwe.addEventListener("click",(e)=> {
-    console.log(e.target.value);
-    zxc.value = e.target.value;
-})
+// qwe.addEventListener("click",(e)=> {
+//     console.log(e.target.value);
+//     zxc.value = e.target.value;
+// })
+
+
 
 $(document).ready(function () {
     $("#qwe").validate({

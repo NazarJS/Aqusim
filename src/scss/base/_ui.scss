@@ -16,20 +16,11 @@
     text-overflow: ellipsis;
 
     &:hover {
-        background-color: rgba(0,0,0,0);
-        border: 3px solid #ee2742;
-        line-height: 77px;
-        color: #ee2742;
+        background-color: #000;
+        
     }
 
-    @media(max-width:1024px) {
-       &:hover {
-            background-color: rgba(0,0,0,0);
-            border: 3px solid #ee2742;
-            line-height: 40px;
-            color: #ee2742;
-       }
-    }
+    
 }
 
 .ui-btn-clear {
@@ -60,6 +51,10 @@
 
 .ui-breadcrumbs {
     margin-bottom: 120px;
+
+    @media(max-width:1024px) {
+        margin-bottom: 90px;
+    }
 
     @media(max-width:576px) {
         margin-bottom: 45px;
