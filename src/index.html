@@ -68,13 +68,13 @@
   <div class="main">
     <div class="container">
       <div class="main-about">
-        <div class="main-about-img">
+        <a href="./about.html" class="main-about-img">
           <img class="main-about-img-image" src="./images/about-img.png" alt="alt" loading="lazy">
           <img class="main-about-img-logo" src="./images/svg/logo-svg.svg" alt="alt" loading="lazy">
-        </div>
+        </a>
   
         <div class="main-about-info">
-          <div class="main-about-info-title">About us</div>
+          <div class="main-about-info-title ui-title">About us</div>
           <div class="main-about-info-wrap">
            
               <p>
@@ -100,14 +100,14 @@
     
       <div class="main-job">
         <div class="main-job-img">
-          <img src="./images/job-img.png" alt="alt" loading="lazy">
+          <img class="main-job-img-logo" src="./images/svg/logo-svg.svg" alt="alt" loading="lazy">
           <div class="main-job-wrap">
             <div class="main-job-wrap-title">Looking for a job?</div>
   
               <div class="main-job-wrap-txt">We offer exciting career opportunities to skilled multilingual professionals. Take your career to the next level! Please complete the form on the right and attach a CV.
             </div>
   
-            <a href="#" class="main-job-wrap-btn ui-btn">
+            <a href="#" class="main-job-wrap-btn ui-btn-clear">
               SEARCH OPEN POSITIONS
             </a>
           </div>
@@ -131,14 +131,7 @@
   
                 <div class="field-wrap field-telephone">
                   <img src="./images/svg/mobile.svg" alt="alt" loading="lazy">
-                  <div class="field-telephone-wrap">
-                    <select name="" id="" class="field-telephone-wrap-select">
-                      <option value="+41">+41</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
-                  </div>
+                  
                   <input type="text" name="telephone" id="telephone" class="field-input zxc" placeholder="" value="+41">
                 </div>
               </div>
@@ -164,7 +157,12 @@
   
               <div class="main-job-info-wrap">
                 <!-- <a href="#" class="main-job-info-btn ui-btn">UPLOAD CV*</a> -->
-                <input type="" class="main-job-info-btn ui-btn-clear"  placeholder="UPLOAD CV*">
+                <!-- <label for="qwe" class="main-job-info-btn ui-btn-clear">
+                    UPLOAD CV*
+                </label>
+                <input type="file" id="qwe" class="input-file" name ="qwe"   placeholder="UPLOAD CV*"  multiple accept="image/*,image/jpeg"> -->
+                <label for="myfile" class="main-job-info-btn ui-btn-clear">UPLOAD CV*</label>
+                <input type="file" class="input-file" id="myfile" name="myfile" multiple>
                 <button type="submit"  class="main-job-info-btn ui-btn">SEND</button>
               </div>
             </form>
@@ -176,7 +174,7 @@
     
       <div class="main-about main-look">
         <div class="main-about-info">
-          <div class="main-about-info-title">Looking to hire?</div>
+          <div class="main-about-info-title ui-title">Looking to hire?</div>
           <div class="main-about-info-wrap">
             <p>
               We have many years of experience in attracting and selecting high- quality Candidates on behalf of our clients across a wide range of technologies and industry verticals, adapting our services in each search to deliver based on their preferred sourcing mechanisms and timeframes.   
@@ -190,6 +188,7 @@
               Speak to one of our experts today for rapid access to the most sought digital, analytics and technology talent and to discuss how we can tailor a program to guarantee your desired results.
             </p>
           </div>
+          
           <a href="#" class="main-about-info-btn ui-btn">
             TALK TO A CONSULTANT
           </a>
@@ -204,7 +203,7 @@
 
     <div class="main-expertise">
         <div class="main-expertise-container">
-          <div class="main-expertise-title">Areas of Expertise</div>
+          <div class="main-expertise-title ui-title">Areas of Expertise</div>
           <div class="main-expertise-wrap">
             <ul>
               <li>
@@ -272,16 +271,24 @@
             </div>
   
             <div class="main-touch-follow">
+
               <div class="main-touch-follow-txt">Follow us on social:</div>
+
               <div class="main-touch-follow-img">
-                <img src="./images/svg/touch-fb.svg" alt="alt" loading="lazy">
-                <img src="./images/svg/touch-in.svg" alt="alt" loading="lazy">
+                <a href="#" class="main-touch-follow-link">
+                  <img src="./images/svg/touch-fb.svg" alt="alt" loading="lazy">
+                </a>
+
+                <a href="#" class="main-touch-follow-link">
+                  <img src="./images/svg/touch-in.svg" alt="alt" loading="lazy">
+                </a>
+      
               </div>
             </div>
           </div>
         </div> 
         <div class="main-job-info">
-          <div class="main-about-info-title">Get in Touchs</div>
+          <div class="main-about-info-title ui-title">Get in Touchs</div>
   
           <div class="main-job-info-line"></div>
   
@@ -307,14 +314,7 @@
   
                 <div class="field-wrap field-telephone">
                   <img src="./images/svg/mobile.svg" alt="alt" loading="lazy">
-                  <div class="field-telephone-wrap">
-                    <select name="" id="" class="field-telephone-wrap-select">
-                      <option value="+41">+41</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
-                  </div>
+                  
                   <input type="text" name="telephone" id="telephone" class="field-input zxc" placeholder="" value="+41">
                 </div>
               </div>

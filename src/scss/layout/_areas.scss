@@ -342,9 +342,11 @@
                 position: relative;
                 display: none;
                 margin: 0 -45px;
+                margin-top: 25px;
 
                 @media(max-width:576px){
                     margin: 0 -25px;
+                    margin-top: 25px;
                 }
 
         
@@ -547,6 +549,7 @@
         }
 
         &-btn{
+            max-width: 200px;
             border: none;
             height: 57px;
             line-height: 57px;

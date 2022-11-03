@@ -1,0 +1,50 @@
+.about {
+    @media(max-width:576px) {
+        padding-bottom: 80px;
+    }
+    .main-about {
+        margin-bottom:0;
+        padding-bottom: 0;
+    }
+
+    .main-about-img {
+        @media(max-width:576px) {
+            display: none;
+        }
+    }
+
+    .main-about-info-title {
+        margin-bottom: 30px;
+        color:#000;
+
+        @media(max-width:576px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .main-about-info-line {
+        width: 240px;
+        height: 6px;
+        margin-bottom: 80px;
+        background-color: $colorRed;
+
+        @media(max-width:576px) {
+            margin-bottom: 45px;
+        }
+    }
+
+    .main-about-info-btn {
+        max-width: 275px;
+
+        @media(max-width:576px) {
+           max-width: 190px;
+           height: 57px;
+           line-height: 51px;
+        }
+    }
+
+    .main-about-info-wrap {
+        overflow-y: clip;
+        height: auto;
+    }
+}

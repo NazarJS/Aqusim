@@ -14,10 +14,15 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: .3s background-color,.3s color,.3s border-color,.3s box-shadow,.3s -webkit-box-shadow;
 
     &:hover {
-        background-color: #000;
-        
+        background-color: #000;  
+    }
+
+    @media(max-width:1024px) {
+        height: 43px;
+        line-height: 43px;
     }
 
     
@@ -37,10 +42,16 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: .3s background-color,.3s color,.3s border-color,.3s box-shadow,.3s -webkit-box-shadow;
 
     &:hover {
         color: #000;
         border: 3px solid #000;
+    }
+
+    @media(max-width:1024px) {
+        height: 43px;
+        line-height: 37px;
     }
 
     @media(max-width:576px) {
@@ -82,6 +93,23 @@
             text-decoration: underline;
         }
 
+        @media(max-width:1024px){
+            font-size: rem(16);
+
+            &::after {
+                position: relative;
+                display: inline-block;
+                content: "";
+                margin: 0 5px;
+                transform: rotate(45deg);
+                border-top: 1px solid #000;
+                border-right: 1px solid #000;
+                width: 8px;
+                height: 8px;
+                top: -1px;
+            }
+        }
+
         @media(max-width:576px){
             font-size: rem(10);
 
@@ -104,6 +132,10 @@
         font-size: rem(24);
         color: $colorRed;
 
+        @media(max-width:1024px){
+            font-size: rem(16);
+        }
+
         @media(max-width:576px){
             font-size: rem(10);
         }
@@ -111,5 +143,16 @@
         &:hover {
             text-decoration: underline;
         }
+    }
+}
+
+.ui-title {
+    font-size: rem(70);
+    font-weight: 700;
+    line-height: 1.17;
+    color: $colorDark;
+
+    @media(max-width:1024px) {
+        font-size: rem(38);
     }
 }
