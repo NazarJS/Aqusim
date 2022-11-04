@@ -53,12 +53,12 @@
     </div>
 
     <div class="main-header-lady">
-      <picture>
+      
         <source media="(min-width: 1024px)" srcset="./images/header-lady.png"/>
-        <source media="(min-width: 576px)" srcset="./images/header-lady-adap.png"/>
+        <source media="(min-width: 576px)" srcset="./images/header-lady-adaptive.png"/>
         
-        <img src="./images/header-lady-adaptive.png" alt="alt" loading="lazy"/>
-      </picture>
+        <img src="./images/header-lady.png" alt="alt" loading="lazy"/>
+      
     </div>
     
   </div>
@@ -132,38 +132,33 @@
                 <div class="field-wrap field-telephone">
                   <img src="./images/svg/mobile.svg" alt="alt" loading="lazy">
                   
-                  <input type="text" name="telephone" id="telephone" class="field-input zxc" placeholder="" value="+41">
+                  <!-- <input type="text" name="telephone" id="" id="telephone" class="field-input" placeholder=""> -->
+                  <input type="tel" id="demo" placeholder="" id="telephone" class="field-input">
+
                 </div>
               </div>
   
-              <div class="field-wrap">
+              <div class="field-wrap field-telephone">
                 <textarea id="textbox" name="textbox" placeholder="Your Message*" class="ui-input" rows="4"></textarea>
               </div>
   
               <div class="main-job-info-wrap">
-                <div class="main-job-info-style">
-                  *(doc, docx, pdf, jpg)
+                <div class="main-job-info-box">
+                  <div class="main-job-info-style">
+                    *(doc, docx, pdf, jpg)
+                  </div>
+  
+                  <label for="myfile" class="main-job-info-btn main-job-info-input ui-btn-clear">UPLOAD CV*</label>
+                  <input type="file" class="input-file" id="myfile" name="myfile" multiple>
                 </div>
                 <div class="main-job-info-check">
-                  <!-- <input type="checkbox" id="customCheckbox" class="ui-checkbox-input" name="customCheckbox" >
-                  <label for="customCheckbox" class="ui-checkbox-label">
-                    I agree to the Privacy Policy <br> and Terms & Conditions
-                  </label> -->
-  
-                  <input type="checkbox" class="custom-checkbox" id="happy" name="happy" value="yes">
-                  <label for="happy">Happy</label>
+                  
+                  <input type="checkbox" class="custom-checkbox" id="form-1" name="form-1" value="yes">
+                  <label for="form-1">I agree to the <a href="#" class="checkbox-link">Privacy Policy</a> <br> and <a href="#" class="checkbox-link">Terms & Conditions</a></label>
+
+                  <button type="submit"  class="main-job-info-btn ui-btn">SEND</button>
+
                 </div>
-              </div>
-  
-              <div class="main-job-info-wrap">
-                <!-- <a href="#" class="main-job-info-btn ui-btn">UPLOAD CV*</a> -->
-                <!-- <label for="qwe" class="main-job-info-btn ui-btn-clear">
-                    UPLOAD CV*
-                </label>
-                <input type="file" id="qwe" class="input-file" name ="qwe"   placeholder="UPLOAD CV*"  multiple accept="image/*,image/jpeg"> -->
-                <label for="myfile" class="main-job-info-btn ui-btn-clear">UPLOAD CV*</label>
-                <input type="file" class="input-file" id="myfile" name="myfile" multiple>
-                <button type="submit"  class="main-job-info-btn ui-btn">SEND</button>
               </div>
             </form>
         </div>
@@ -174,7 +169,7 @@
     
       <div class="main-about main-look">
         <div class="main-about-info">
-          <div class="main-about-info-title ui-title">Looking to hire?</div>
+          <div class="main-about-info-title  ui-title">Looking to hire?</div>
           <div class="main-about-info-wrap">
             <p>
               We have many years of experience in attracting and selecting high- quality Candidates on behalf of our clients across a wide range of technologies and industry verticals, adapting our services in each search to deliver based on their preferred sourcing mechanisms and timeframes.   
@@ -315,7 +310,7 @@
                 <div class="field-wrap field-telephone">
                   <img src="./images/svg/mobile.svg" alt="alt" loading="lazy">
                   
-                  <input type="text" name="telephone" id="telephone" class="field-input zxc" placeholder="" value="+41">
+                  <input type="text" name="telephone" id="telephone" class="field-input" placeholder="" value="+41">
                 </div>
               </div>
   
@@ -323,25 +318,16 @@
                 <textarea id="textbox" name="textbox" placeholder="Your Message*" class="ui-input" rows="4"></textarea>
               </div>
   
-              <div class="main-job-info-wrap">
-                <div class="main-job-info-style">
-                  *(doc, docx, pdf, jpg)
-                </div>
+              <div class="main-job-info-wrap main-job-info-touch">
+                
                 <div class="main-job-info-check">
-                  <!-- <input type="checkbox" id="customCheckbox" class="ui-checkbox-input" name="customCheckbox" >
-                  <label for="customCheckbox" class="ui-checkbox-label">
-                    I agree to the Privacy Policy <br> and Terms & Conditions
-                  </label> -->
-  
-                  <input type="checkbox" class="custom-checkbox" id="happy" name="happy" value="yes">
-                  <label for="happy">Happy</label>
+                  
+                  <input type="checkbox" class="custom-checkbox" id="form-2" name="form-1" value="yes">
+                  <label for="form-2">I agree to the <a href="#" class="checkbox-link">Privacy Policy</a> <br> and <a href="#" class="checkbox-link">Terms & Conditions</a></label>
+
+                  <button type="submit"  class="main-job-info-btn ui-btn">SEND</button>
+
                 </div>
-              </div>
-  
-              <div class="main-job-info-wrap">
-                <!-- <a href="#" class="main-job-info-btn ui-btn">UPLOAD CV*</a> -->
-                <input type="" class="main-job-info-btn ui-btn-clear"  placeholder="UPLOAD CV*">
-                <button type="submit"  class="main-job-info-btn ui-btn">SEND</button>
               </div>
             </form>
         </div>

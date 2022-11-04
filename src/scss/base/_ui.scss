@@ -1,7 +1,6 @@
 .ui-btn {
     display: inline-block;
     width: 100%;
-    // max-width: 322px;
     padding: 0 5px;
     height: 80px;
     line-height: 80px;
@@ -15,6 +14,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     transition: .3s background-color,.3s color,.3s border-color,.3s box-shadow,.3s -webkit-box-shadow;
+    font-size: rem(24);
 
     &:hover {
         background-color: #000;  
@@ -23,6 +23,13 @@
     @media(max-width:1024px) {
         height: 43px;
         line-height: 43px;
+        font-size: rem(14);
+    }
+
+    @media(max-width:576px) {
+        height: 57px;
+        line-height: 57px;
+        font-size: rem(18);
     }
 
     
@@ -35,6 +42,7 @@
     line-height: 74px;
     padding: 0 5px;
     border: 3px solid $colorRed;
+    font-size: rem(24);
     font-weight: 700;
     color: $colorRed;
     text-transform: uppercase;
@@ -52,11 +60,13 @@
     @media(max-width:1024px) {
         height: 43px;
         line-height: 37px;
+        font-size: rem(14);
     }
 
     @media(max-width:576px) {
         height: 57px;
         line-height: 51px;
+        font-size: rem(18);
     }
 }
 
@@ -129,6 +139,7 @@
     }
 
     &-current {
+        font-weight: 600;
         font-size: rem(24);
         color: $colorRed;
 

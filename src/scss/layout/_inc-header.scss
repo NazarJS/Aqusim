@@ -1,16 +1,19 @@
 .header {
     position: relative;
-    padding-top: 80px;
+    padding-top: 360px;
     margin-bottom: 80px;
 
     @media(max-width:1024px){
         margin-bottom: 50px;
-        padding-top: 45px;
+        padding-top: 320px;
+    }
+
+    @media(max-width:576px) {
+        padding-top: 255px;
     }
 
     @media(max-width:420px){
         margin-bottom: 45px;
-        padding-top: 25px;
     }
 
     &-logo {
@@ -23,12 +26,26 @@
         }
     }
 
+    &-fixed {
+        width: 100%;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        // padding-top: 80px;
+        background-color: $colorBack;
+        z-index: 11;
+        background: transparent;
+
+        
+    }
+
     &-container {
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: relative;
         z-index: 1;
+       
     }
 
     &-nav {
@@ -79,7 +96,7 @@
                     }
 
                     @media(max-width:1450px) {
-                        font-size: rem(16);
+                        font-size: rem(18);
                     }
 
                     @media(max-width:1150px) {
@@ -204,6 +221,39 @@
         &-brand {
             img {
                 margin-right: 15px;
+            }
+        }
+    }
+
+    &-error {
+        margin-bottom: 0;
+        background-color: $colorBack;
+
+        .header-logo {
+            max-width: 245px;
+            flex: 0 0 245px;
+
+            @media(max-width:1024px) {
+                max-width: 128px;
+                flex: 0 0 128px;
+            }
+        }
+    }
+
+    .bg-white {
+        top: 0;
+        padding-top: 0;
+        background-color: white;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        .header-logo {
+            max-width: 175px;
+            flex: 0 0 175px;
+
+            @media(max-width:1024px) {
+                max-width: 128px;
+                flex: 0 0 128px;
             }
         }
     }
