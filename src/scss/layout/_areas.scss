@@ -67,6 +67,7 @@
             }
 
             &-btn {
+                max-width: 300px;
                 color: #fff;
                 border: 3px solid #fff;
 
@@ -143,6 +144,13 @@
 
                 @media(max-width:1300px) {
                     max-width: 150px;
+                    height: 43px;
+                    font-size: rem(14);
+                    line-height: 37px;
+                }
+
+                @media(max-width:1023px) {
+                    max-width: 200px;
                 }
             }
 

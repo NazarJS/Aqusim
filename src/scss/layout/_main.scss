@@ -959,18 +959,13 @@
             }
 
             &-btn {
+                max-width: 412px;
                 @media (max-width:1024px) {
                     max-width: 235px;
-                    // font-size: rem(14);
-                    // height: 43px;
-                    // line-height: 43px;
                 }
 
                 @media (max-width:576px) {
                     max-width: 290px;
-                    // font-size: rem(14);
-                    // height: 43px;
-                    // line-height: 43px;
                 }
             }
         }

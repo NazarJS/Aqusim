@@ -27,9 +27,9 @@
     }
 
     @media(max-width:576px) {
-        height: 57px;
-        line-height: 57px;
-        font-size: rem(18);
+        height: 57px !important;
+        line-height: 57px !important;
+        font-size: rem(18) !important;
     }
 
     
