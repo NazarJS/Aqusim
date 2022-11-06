@@ -8,6 +8,10 @@
     }
 
     .main-about-img {
+        height: auto;
+        padding-bottom: 0;
+        overflow: auto;
+        
         @media(max-width:576px) {
             display: none;
         }
@@ -45,6 +49,14 @@
 
     .main-about-info-wrap {
         overflow-y: clip;
+        height: auto;
+    }
+
+    .main-about-img-image {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
         height: auto;
     }
 }

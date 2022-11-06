@@ -17,7 +17,7 @@ $(document).on("click", ".mobile-filter-close", function () {
 });
 let scrollpos = window.scrollY
 
-const header = document.querySelector(".header-fixed")
+const header = document.querySelector(".qwe")
 const scrollChange = 80;
 
 const add_class_on_scroll = () => header.classList.add("bg-white")
@@ -188,6 +188,39 @@ separateDialCode: false,
 utilsScript: ""
 });
 
+
+$(document).on("click", ".mfp-link", function () {
+  var a = $(this);
+  $.magnificPopup.open({
+    items: { src: a.attr("data-href") },
+    type: "ajax",
+    overflowY: "scroll",
+    removalDelay: 300,
+    mainClass: 'my-mfp-zoom-in',
+    ajax: {
+      tError: "Error. Not valid url",
+    },
+    callbacks: {
+      open: function () {
+        setTimeout(function(){
+          $('.mfp-wrap').addClass('not_delay');
+          $('.mfp-popup').addClass('not_delay');
+        },700);
+      }
+    },
+
+    callbacks: {
+      open: function() {
+        document.documentElement.style.overflow = 'hidden'
+      },
+
+      close: function() {
+        document.documentElement.style.overflow = ''
+      }
+    }
+  });
+  return false;
+});
 
  
 

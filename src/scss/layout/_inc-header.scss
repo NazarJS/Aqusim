@@ -1,15 +1,15 @@
 .header {
     position: relative;
-    padding-top: 360px;
+    // padding-top: 360px;
     margin-bottom: 80px;
 
     @media(max-width:1024px){
         margin-bottom: 50px;
-        padding-top: 320px;
+        // padding-top: 320px;
     }
 
     @media(max-width:576px) {
-        padding-top: 255px;
+        // padding-top: 255px;
     }
 
     @media(max-width:420px){
@@ -26,17 +26,52 @@
         }
     }
 
-    &-fixed {
-        width: 100%;
-        position: fixed;
-        top: 80px;
-        left: 0;
-        // padding-top: 80px;
-        background-color: $colorBack;
-        z-index: 11;
-        background: transparent;
+    &-about {
+        @media(max-width:576px) {
+            background-image: url("../images/about-image.png");
+            background-size: cover;
+            padding-bottom: 250px;
+            background-position: center;
+        }
 
+        .header-fixed {
+            margin-bottom: 0;
+        }
+
+        .bg-white {
+            .header-box {
+            padding-top: 168px !important;
+
+            @media(max-width:1024px) {
+                padding-top: 100px !important;
+            }
+
+            @media(max-width:576px) {
+                padding-top: 80px !important;
+            }
+        }
+        }
         
+    }
+
+    &-adap {
+        .bg-white {
+            .header-box {
+            padding-top: 168px !important;
+
+            @media(max-width:1024px) {
+                padding-top: 100px !important;
+            }
+
+            @media(max-width:576px) {
+                padding-top: 80px !important;
+            }
+        }
+        }
+
+        .header-fixed {
+            margin-bottom: 0;
+        }
     }
 
     &-container {
@@ -128,7 +163,7 @@
         height: 100%;
         background-color: #E4E4E4;      
         top: 0;
-        z-index: 7;
+        z-index: 15;
         margin: 0 -45px;
         padding: 45px 45px 80px 45px;
         overflow-y: auto;   
@@ -240,12 +275,60 @@
         }
     }
 
+    &-fixed {
+        width: 100%;
+        margin-bottom: 190px;
+        padding-top: 80px;
+        background-color: $colorBack;
+        z-index: 11;
+        background: transparent;
+
+        @media(max-width:1024px) {
+            margin-bottom: 210px;
+            padding-top: 50px;
+        }
+
+        @media(max-width:576px) {
+            margin-bottom: 135px;
+            padding-top: 30px;
+        }
+
+        .container {
+            padding: 0;
+            
+        }        
+    }
+
     .bg-white {
-        top: 0;
-        padding-top: 0;
-        background-color: white;
-        padding-top: 15px;
-        padding-bottom: 15px;
+        .header-fixed {
+            position: fixed;
+            top: 0;
+            padding-top: 0;
+            background-color: white;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin: 0 -80px;
+
+            @media(max-width:1024px) {
+                margin: 0 -45px;
+            }
+
+            @media(max-width:576px) {
+                margin: 0 -25px;
+            }
+        }
+
+        .container {
+            padding: 0 80px;
+
+            @media(max-width:1024px) {
+                padding: 0 45px;
+            }
+
+            @media(max-width:576px) {
+                padding: 0 25px;
+            }
+        }
 
         .header-logo {
             max-width: 175px;
@@ -256,6 +339,21 @@
                 flex: 0 0 128px;
             }
         }
+
+        .header-box {
+            padding-top: 360px;
+
+            @media(max-width:1024px) {
+                padding-top: 340px;
+            }
+
+            @media(max-width:576px) {
+                padding-top: 215px;
+            }
+        }
+        // .main-header-title {
+        //     padding-top: 360px;
+        // }
     }
 
     .jq-selectbox__select {

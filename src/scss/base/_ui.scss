@@ -64,9 +64,9 @@
     }
 
     @media(max-width:576px) {
-        height: 57px;
-        line-height: 51px;
-        font-size: rem(18);
+        height: 57px !important;
+        line-height: 51px !important;
+        font-size: rem(18) !important;
     }
 }
 
