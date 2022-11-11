@@ -1,6 +1,10 @@
 p {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+
+  @media (max-width: 1023px) {
+    margin-bottom: 20px;
+  }
 }
 
 ul,
@@ -26,40 +30,52 @@ h5,
 .h4,
 .h5 {
   font-family: $fontRal;
-  color: #000;
+  color: $colorDark;
   text-transform: none;
-  line-height: 1.42;
+  line-height: 1.17;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 h1,
 .h1 {
-  font-size: rem(40px);
+  font-size: rem(85);
+  margin-top: 0;
+
+  @media (max-width: 1366px) {
+    font-size: rem(42);
+  }
 }
 
 h2,
 .h2 {
-  margin-top: 30px;
-  font-size: rem(32px);
+  font-size: rem(70);
+
+  @media (max-width: 1366px) {
+    font-size: rem(38);
+  }
 }
 
 h3,
 .h3 {
-  margin-top: 30px;
-  font-size: rem(22px);
+  font-size: rem(34);
+  font-weight: 500;
+
+  @media (max-width: 1366px) {
+    font-size: rem(28);
+  }
 }
 
 h4,
 .h4 {
-  margin-top: 30px;
-  font-size: rem(18px);
+  font-size: rem(24);
+  color: #000;
 }
 
 h5,
 .h5 {
-  margin-top: 30px;
-  font-size: rem(16px);
+  font-size: rem(20);
 }
 
 a {

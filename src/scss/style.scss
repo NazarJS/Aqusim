@@ -1,9 +1,10 @@
 /* base */
+@import "./base/mixin.scss";
 @import "./base/vars.scss";
 @import "./base/typography.scss";
 @import "./base/grid.scss";
-@import "./base/mixin.scss";
 @import "./base/ui.scss";
+@import "./base/popups.scss";
 
 /* layout */
 @import "./layout/inc-header.scss";
@@ -18,7 +19,9 @@
 @import "./layout/about.scss";
 
 
-* {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
@@ -37,12 +40,25 @@ body {
   padding: 0;
   height: 100%;
   min-height: 100%;
-  font-family: $fontRal;
-  font-weight: 400;
-  font-size: rem(16px);
+  font-family: $fontNun;
+  font-weight: 300;
+  font-size: rem(22);
   line-height: 1.42;
   color: #000;
   background-color: #fff;
+
+  @media (max-width: 1366px) {
+    font-size: rem(20);
+  }
+
+  @media (max-width: 1023px) {
+    font-size: rem(14);
+  }
+
+  @media (max-width: 599px) {
+    font-size: rem(18);
+    line-height: 1.25;
+  }
 }
 
 #wrapper {
@@ -80,12 +96,23 @@ body {
   margin: 0 auto;
   padding-left: 80px;
   padding-right: 80px;
-  @media (max-width: 1024px) {
-    padding-right: 45px;
-    padding-left: 45px;
+
+  @media (max-width: 1680px) {
+    padding-right: 60px;
+    padding-left: 60px;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 1366px) {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  @media (max-width: 1024px) {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  @media (max-width: 599px) {
     padding-right: 25px;
     padding-left: 25px;
   }

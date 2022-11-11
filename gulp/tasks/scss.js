@@ -15,12 +15,12 @@ export const scss = () => {
       outputStyle: 'compressed'
     }).on('error', sass.logError))
 		.pipe(prefixer({
-			browsers: ['last 2 versions']
+			overrideBrowserslist: ['last 3 versions']
 		}))
 		.pipe(clean({
 			level: 2
 		}))
 		.pipe(concat('style.css'))
-		.pipe(map.write('../sourcemaps/'))
+		.pipe(map.write('sourcemaps'))
     .pipe(app.gulp.dest(app.path.build.css))
 }
