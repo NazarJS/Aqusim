@@ -16,6 +16,19 @@ $(document).on("click", ".vacancy-filters-close", function () {
   $(".vacancy-filters").removeClass('mobile-opened');
 });
 
+
+$(document).on('click', '.vacancy-filters-reset', function(e) {
+  e.preventDefault();
+  const form = document.querySelector('.vacancy-filters-form')
+  form.reset();
+  const selects = form.querySelectorAll('select')
+  selects.forEach(el => {
+    $(el).trigger('refresh');
+  })
+});
+
+
+
 {
   const header = document.querySelector("#header")
   const scrollTrigger = () => {
@@ -44,21 +57,6 @@ $(document).on("click", ".vacancy-filters-close", function () {
 }
 
 
-
-
-// $(document).on("click", ".main-filter-select", function () {
-//     $(".header-mobile").addClass('qwe');
-// });
-
-// let qwe = document.querySelector(".field-telephone-wrap-select");
-// let zxc = document.querySelector(".zxc");
-
-
-// qwe.addEventListener("click",(e)=> {
-//     console.log(e.target.value);
-//     zxc.value = e.target.value;
-// })
-
 if (document.querySelector('.main-screen')) {
   document.querySelector('#header').classList.add('header-main')
 }
@@ -68,6 +66,13 @@ jQuery.validator.setDefaults({
 	successClass: 'ui-field-valid',
 	focusInvalid: false,
 	errorElement: 'div',
+  errorPlacement: function (error, element) {
+    if ( element.hasClass('ui-tel') ) {
+      element.closest('.iti').after(error);
+    } else {
+      error.insertAfter(element);
+    }
+  }
 });
 jQuery.validator.addMethod("telephone", function(value, element) {
   return this.optional(element) || /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){6,14}(\s*)?$/i.test(value);
@@ -78,8 +83,9 @@ jQuery.validator.addMethod(
   function (value, element) {
     return this.optional(element) || /^[a-zA-ZА-Яа-я\s]+$/i.test(value);
   },
-  " "
+  "Only letters"
 );
+
 
 $(document).ready(function () {
 
