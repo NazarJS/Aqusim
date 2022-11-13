@@ -173,6 +173,17 @@ $(document).ready(function () {
 });
 
 
+function showPopup(url = 'popups/popup-thanks.html') {
+  $.magnificPopup.open({
+    items: { src: url },
+    type: "ajax",
+    overflowY: "scroll",
+    removalDelay: 300,
+    mainClass: 'my-mfp-zoom-in'
+  });
+}
+
+
 const Store = {
 	files: [],
 	removeFile: function(index) {
