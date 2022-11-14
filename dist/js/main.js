@@ -173,17 +173,19 @@ $(document).ready(function () {
 });
 
 function openInlinePopup(popupID) {
-  $.magnificPopup.open({
-    items: { 
-      src: popupID,
-      type: 'inline'
-    },
-    overflowY: "scroll",
-    removalDelay: 300,
-    mainClass: 'my-mfp-zoom-in'
-  });
+  $.magnificPopup.close();
+  setTimeout(()=>{
+    $.magnificPopup.open({
+      items: { 
+        src: popupID,
+        type: 'inline'
+      },
+      overflowY: "scroll",
+      removalDelay: 300,
+      mainClass: 'my-mfp-zoom-in'
+    });
+  },301)
 }
-
 $(document).on('click','.mfp-inline',function(e){
   e.preventDefault();
   const popupID = $(this).attr('data-popup')
@@ -192,13 +194,18 @@ $(document).on('click','.mfp-inline',function(e){
 
 
 function showPopup(url = 'popups/popup-thanks.html') {
-  $.magnificPopup.open({
-    items: { src: url },
-    type: "ajax",
-    overflowY: "scroll",
-    removalDelay: 300,
-    mainClass: 'my-mfp-zoom-in'
-  });
+  $.magnificPopup.close();
+  setTimeout(()=>{
+    $.magnificPopup.open({
+      items: { 
+        src: url,
+        type: "ajax"
+      },
+      overflowY: "scroll",
+      removalDelay: 300,
+      mainClass: 'my-mfp-zoom-in'
+    });
+  },301)
 }
 
 
