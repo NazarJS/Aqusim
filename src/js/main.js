@@ -172,6 +172,24 @@ $(document).ready(function () {
 
 });
 
+function openInlinePopup(popupID) {
+  $.magnificPopup.open({
+    items: { 
+      src: popupID,
+      type: 'inline'
+    },
+    overflowY: "scroll",
+    removalDelay: 300,
+    mainClass: 'my-mfp-zoom-in'
+  });
+}
+
+$(document).on('click','.mfp-inline',function(e){
+  e.preventDefault();
+  const popupID = $(this).attr('data-popup')
+  openInlinePopup(popupID)
+})
+
 
 function showPopup(url = 'popups/popup-thanks.html') {
   $.magnificPopup.open({
