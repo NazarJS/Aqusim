@@ -183,6 +183,7 @@ function openInlinePopup(popupID) {
     mainClass: 'my-mfp-zoom-in'
   });
 }
+
 $(document).on('click','.mfp-inline',function(e){
   e.preventDefault();
   const popupID = $(this).attr('data-popup')
