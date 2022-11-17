@@ -600,7 +600,8 @@ textarea.ui-input {
         display: inline-block;
         cursor: pointer;
     }
-    &-input {
+    &-input,
+    input[type="file"] {
         position: absolute;
         left: 0;
         top: 0;

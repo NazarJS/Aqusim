@@ -2,7 +2,7 @@
 
 </div><!--.container-->
 
-<div class="main-screen">
+<div class="main-screen" id="home">
   <div class="container">
     <div class="main-screen-body">
 
@@ -61,7 +61,7 @@
 
 <div class="container">
     
-  <div class="main-about main-block">
+  <div class="main-about main-block" id="about">
     <div class="row main-row">
       <div class="main-col main-col-about-left">
         <a href="#" class="main-block-bg layout-negative-left">
@@ -96,7 +96,7 @@
 
   </div><!--.main-block-->
 
-  <div class="main-job main-block">
+  <div class="main-job main-block" id="job">
     <div class="main-row row">
       <div class="main-col main-col-job-left">
         <div class="main-job-img layout-negative-left">
@@ -116,7 +116,7 @@
       <div class="main-col main-col-job-right">
         <div class="main-block-content">
           <div class="main-job-info">
-            <form class="main-job-form">
+            <form class="main-job-form" name="job">
               <div class="ui-fields">
                 <div class="row">
                   <div class="col-xs-6">
@@ -127,7 +127,7 @@
 
                   <div class="col-xs-6">
                     <div class="ui-field">
-                      <input type="text" name="secondName" id="secondName" class="ui-input" placeholder="Last Name*">
+                      <input type="text" name="secondName" id="secondName" class="ui-input" placeholder="Last Name*" required>
                     </div>
                   </div>
                 </div>
@@ -141,13 +141,13 @@
 
                   <div class="col-xs-6">
                     <div class="ui-field">
-                      <input type="tel" placeholder="" class="ui-tel ui-input" id="telephone">
+                      <input type="tel" placeholder="" class="ui-tel ui-input" id="telephone" required>
                     </div>
                   </div>
                 </div>
     
                 <div class="ui-field">
-                  <textarea id="textbox" name="textbox" placeholder="Your Message*" class="ui-input" rows="4"></textarea>
+                  <textarea id="textbox" name="textbox" placeholder="Your Message*" class="ui-input" rows="4" required></textarea>
                 </div>
               </div><!--.fields-->
               
@@ -188,7 +188,7 @@
   </div><!--.main-block-->
   
   
-  <div class="main-look main-block">
+  <div class="main-look main-block" id="employers">
     <div class="row main-row">
       <div class="main-col main-col-look-left">
         <div class="main-block-content">
@@ -224,7 +224,7 @@
 
 <div class="ui-bg-light">
   <div class="container">
-    <div class="main-expertise main-block">
+    <div class="main-expertise main-block" id="areas">
       <div class="main-row row">
         <div class="main-col main-col-expertise-left">
           <div class="main-block-title">Areas of Expertise</div>
@@ -268,7 +268,7 @@
     </div><!--.main-block-->
 
 
-    <div class="main-touch main-block">
+    <div class="main-touch main-block" id="contact">
       <div class="row main-row">
         <div class="main-col main-col-touch-left">
           <div class="main-touch-red layout-negative-left ui-bg-red">

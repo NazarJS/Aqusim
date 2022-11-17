@@ -25,6 +25,7 @@ $(document).on('click', '.vacancy-filters-reset', function(e) {
   selects.forEach(el => {
     $(el).trigger('refresh');
   })
+  form.submit();
 });
 
 
@@ -139,7 +140,23 @@ $(document).ready(function () {
     }
   })
 
-  $(".ui-tel").intlTelInput();
+  $(".ui-tel").intlTelInput({
+    autoHideDialCode: false,
+    autoPlaceholder: "off",
+    nationalMode: false,
+    separateDialCode: false,
+    hiddenInput: "full_number",
+  });
+
+  $(".ui-tel").each(function () {
+    let hiddenInput = $(this).attr('name');
+    $("input[name="+hiddenInput+"-country-code]").val($(this).val());
+  });
+  
+  $(".ui-tel").on("countrychange", function() {
+    let hiddenInput = $(this).attr("name");
+    $("input[name="+hiddenInput+"-country-code]").val(this.value);
+  });
 
   $(document).on("click", ".mfp-link", function () {
     var a = $(this);
@@ -228,10 +245,11 @@ const Store = {
 			let div = document.createElement('div');
 			div.setAttribute('class','ui-uploader-file');
 			div.setAttribute('data-index',i);
-			// $(div).text(that.files[i].name);
+
       const name = document.createElement('span');
       name.setAttribute('class','ui-uploader-file-name');
       name.textContent = that.files[i].name;
+
       $(div).append(name)
 			$(div).append('<i class="ui-uploader-file-delete"></i>');
 			$(block).append(div);
@@ -247,9 +265,8 @@ const Store = {
 
 //добавляем файлы в хранилище и отображаем превью
 $(document).on('change', ".ui-uploader-input", function(e){
-  const filesContainer = $(this).parent().prev('.ui-uploader-files')
+  const filesContainer = $(this).closest('.ui-uploader').find('.ui-uploader-files')
   Store.readURL(e, this, filesContainer);
-  console.log('change');
 });
 
 //удаляем файлы из хранилища(предпросмотр файлов)
@@ -262,6 +279,24 @@ $(document).on('click','.ui-uploader-file-delete',function(e){
 
 
 
+
+let itrObserver = new IntersectionObserver((entries, observer) => { 
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      const id = entry.target.getAttribute('id') || null
+      if (!id || !document.querySelector('#'+id)) return
+
+      $('.header-nav a').removeClass('active')
+      $('.header-nav a[href$='+id+']').addClass('active');
+    }
+  });
+}, {threshold: 0.5});
+
+window.onload = () => {
+  document.querySelectorAll('.main-block, .main-screen').forEach(el => { 
+    itrObserver.observe(el) 
+  })
+}
 
 
 
